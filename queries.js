@@ -1,9 +1,9 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'Nilai GPS',
-  password: '123456',
+  user: 'iolmokgz ',
+  host: 'baasu.db.elephantsql.com (baasu-01)',
+  database: 'iolmokgz',
+  password: '27n2gMVqUp0aRGCznIrI-YPsLTPSXPoG',
   port: 5433,
 })
 const getUsers = (request, response) => {
