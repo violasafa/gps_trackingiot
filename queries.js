@@ -1,7 +1,7 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'iolmokgz ',
-  host: 'baasu.db.elephantsql.com (baasu-01)',
+  host: 'baasu.db.elephantsql.com',
   database: 'iolmokgz',
   password: '27n2gMVqUp0aRGCznIrI-YPsLTPSXPoG',
   port: 5433,
