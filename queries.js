@@ -7,7 +7,7 @@ const pool = new Pool({
   port: 5433,
 })
 const getUsers = (request, response) => {
-  pool.query('SELECT * FROM users ORDER BY id ASC', (error, result) => {
+  pool.query('SELECT * FROM Users ORDER BY id ASC', (error, result) => {
     if (error) {
       throw error
     }
@@ -18,7 +18,7 @@ const getUsers = (request, response) => {
 const getUserById = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('SELECT * FROM t_besar WHERE id = $1', [id], (error, result) => {
+  pool.query('SELECT * FROM T_besar WHERE id = $1', [id], (error, result) => {
     if (error) {
       throw error
     }
@@ -29,7 +29,7 @@ const getUserById = (request, response) => {
 const createUser = (request, response) => {
   const { latitude,longitude,time } = request.body
 
-  pool.query('INSERT INTO t_besar (latitude,longitude,time) VALUES ($1,$2,$3)', [latitude,longitude,time], (error, result) => {
+  pool.query('INSERT INTO T_besar (latitude,longitude,time) VALUES ($1,$2,$3)', [latitude,longitude,time], (error, result) => {
     if (error) {
       throw error
     }
@@ -42,7 +42,7 @@ const updateUser = (request, response) => {
   const { latitude, longitude, time} = request.body
 
   pool.query(
-    'UPDATE users SET latitude = $1, longitude = $2, time =$3, WHERE id = $4',
+    'UPDATE Users SET latitude = $1, longitude = $2, time =$3, WHERE id = $4',
     [latitude, longitude, time, id],
     (error, result) => {
       if (error) {
