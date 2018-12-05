@@ -1,0 +1,25 @@
+{
+  "name": "gps_trackingiot",
+  "version": "1.0.0",
+  "description": "gps tracking",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/violasafa/gps_trackingiot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/violasafa/gps_trackingiot/issues"
+  },
+  "homepage": "https://github.com/violasafa/gps_trackingiot#readme"
+}
