@@ -18,7 +18,7 @@ const getUsers = (request, response) => {
 const getUserById = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('SELECT * FROM t_besar WHERE id = $1', [id], (error, result) => {
+  pool.query('SELECT * FROM "public"."t_besar" LIMIT 100 WHERE id = $1', [id], (error, result) => {
     if (error) {
       throw error
     }
