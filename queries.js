@@ -4,7 +4,7 @@ const pool = new Pool({
   host: 'baasu.db.elephantsql.com',
   database: 'iolmokgz',
   password: '27n2gMVqUp0aRGCznIrI-YPsLTPSXPoG',
-  port: 5433,
+  port: 5432,
 })
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM users ORDER BY id ASC', (error, result) => {
